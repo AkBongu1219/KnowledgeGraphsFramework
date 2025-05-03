@@ -31,3 +31,23 @@ close(): Closes the connection to the database.
 run_query(): Runs a Cypher query with optional parameters and returns a result cursor.
 
 collect_query_results(): Executes a query and returns all results as a list of dictionaries (record.data()), making it easier to work with the data.
+
+## Project Structure
+# KnowledgeGraphsFramework
+
+A framework to work with and evaluate knowledge graphs, particularly using Neo4j.
+
+## Repository Structure
+```bash
+KnowledgeGraphsFramework/
+├── knowledge_graph/
+│   ├── __pycache__/                         # Python cache files
+│   ├── tests/                               # Contains unit or integration tests
+│   ├── .DS_Store                            # macOS system file (should be gitignored)
+│   ├── Input_Nets.csv                       # Input data for knowledge graph generation
+│   ├── Similar_Nets_Neo4j.csv               # CSV with similarity results or edges for Neo4j
+│   ├── data_upload_to_neo4j.py              # Script to upload data into Neo4j
+│   ├── dummy_component_data.json            # Dummy component metadata
+│   └── knowledge_graph_similarity.py        # Code for calculating graph-based similarities
+```
+
