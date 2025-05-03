@@ -1,13 +1,13 @@
 # KnowledgeGraphsFramework(test)
 
-Project Overview
+## Project Overview
 This project implements a knowledge graph-based system for storing and querying electronic component data, with a focus on finding similar nets across different designs. The application uses Neo4j as the graph database backend and provides tools for:
 
  - Loading component data into the knowledge graph
  - Performing similarity searches based on component dimensions and pin counts
  - Exporting similarity results for further analysis
 
-Purpose
+## Purpose
 The end goal of this system is to help engineers and designers identify similar electronic components or nets across different designs, which can be useful for:
 
  - Component reuse opportunities
