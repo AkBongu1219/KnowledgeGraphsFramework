@@ -1,49 +1,29 @@
 # KnowledgeGraphsFramework(test)
 
-## similarity_search.py
-This Python function, find_similar_nets, compares input net components to stored components in a Neo4j graph database to find similar nets based on physical attributes (width, height, pin count). It works as follows:
+Project Overview
+This project implements a knowledge graph-based system for storing and querying electronic component data, with a focus on finding similar nets across different designs. The application uses Neo4j as the graph database backend and provides tools for:
 
-Queries Neo4j to fetch all components linked to nets (Net) and stores their attributes.
+ - Loading component data into the knowledge graph
+ - Performing similarity searches based on component dimensions and pin counts
+ - Exporting similarity results for further analysis
 
-For each component in the input data, it:
+Purpose
+The end goal of this system is to help engineers and designers identify similar electronic components or nets across different designs, which can be useful for:
 
-Computes Euclidean distance between the input and stored components' attributes.
-
-Converts the distance into a similarity score.
-
-Ranks stored components by similarity for each input net.
-
-Returns a list of results containing the similarity score and matching component details.
-
-## running_knowledge_graph.py
-This code defines a Neo4j database interface in Python using the neo4j driver. It creates a class called KnowledgeGraph that handles connecting to and interacting with a Neo4j graph database.
-
-Uses the bolt:// protocol to connect to a local Neo4j instance.
-
-Credentials (neo4j / test12345) are used for authentication.
-
-Class: KnowledgeGraph:
-
-__init__: Initializes the database connection.
-
-close(): Closes the connection to the database.
-
-run_query(): Runs a Cypher query with optional parameters and returns a result cursor.
-
-collect_query_results(): Executes a query and returns all results as a list of dictionaries (record.data()), making it easier to work with the data.
+ - Component reuse opportunities
+ - Identifying design patterns
+ - Knowledge sharing across design teams
+ - Standardization of component selections
 
 ## Project Structure
-# KnowledgeGraphsFramework
 
-A framework to work with and evaluate knowledge graphs, particularly using Neo4j.
-
-## Repository Structure
 ```bash
 KnowledgeGraphsFramework/
 ├── knowledge_graph/
 │   ├── __pycache__/                         # Python cache files
 │   ├── tests/                               # Contains unit or integration tests
-│   ├── .DS_Store                            # macOS system file (should be gitignored)
+         ├── test_data_upload_to_neo4j.py        # Tests data_upload_to_neo4j.py
+         ├── test_knowledge_graph_similarity.py  # Tests knowledge_graph_similarity.py                                                     
 │   ├── Input_Nets.csv                       # Input data for knowledge graph generation
 │   ├── Similar_Nets_Neo4j.csv               # CSV with similarity results or edges for Neo4j
 │   ├── data_upload_to_neo4j.py              # Script to upload data into Neo4j
