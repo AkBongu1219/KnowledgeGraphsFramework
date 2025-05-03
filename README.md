@@ -30,4 +30,5 @@ KnowledgeGraphsFramework/
 │   ├── dummy_component_data.json            # Dummy component metadata
 │   └── knowledge_graph_similarity.py        # Code for calculating graph-based similarities
 ```
+## Method
 
