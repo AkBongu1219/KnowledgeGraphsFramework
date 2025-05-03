@@ -70,9 +70,9 @@ After execution, check:
 
 - `Similar_Nets_Neo4j.csv` — contains ranked matches of input nets to existing nets in the graph with similarity scores and component info.
 
-### Notes
+### Additional Notes
 
 - Adjust the Neo4j credentials or file paths as needed in both scripts.
 - Make sure your Neo4j server allows remote connections and is accessible if you're not running it locally.
-```
+
 
